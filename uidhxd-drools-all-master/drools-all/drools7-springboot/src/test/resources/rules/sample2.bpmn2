@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<definitions id="Definition"
+             targetNamespace="http://www.jboss.org/drools"
+             typeLanguage="http://www.java.com/javaTypes"
+             expressionLanguage="http://www.mvel.org/2.0"
+             xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd"
+             xmlns:g="http://www.jboss.org/drools/flow/gpd"
+             xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+             xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+             xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+             xmlns:tns="http://www.jboss.org/drools">
+
+  <process processType="Private" isExecutable="true" id="com.sample.process" name="sample2." >
+
+    <extensionElements>
+     <tns:import name="org.kie.api.runtime.process.CaseAssignment" />
+     <tns:import name="org.kie.api.runtime.process.CaseData" />
+    </extensionElements>
+    <!-- nodes -->
+    <startEvent id="850139c3-ce76-4a82-93e4-8145a71fd273" name="Start"  isInterrupting="false">
+    </startEvent>
+    <businessRuleTask id="7a319f94-74b7-4869-aadc-e85898373d14" name="Rule" g:ruleFlowGroup="" 
+ implementation="http://www.jboss.org/drools/rule" >
+      <ioSpecification>
+        <inputSet>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+    </businessRuleTask>
+    <endEvent id="d2d62f8d-2ed5-4475-887b-760dedda5296" name="End" >
+        <terminateEventDefinition />
+    </endEvent>
+
+    <!-- connections -->
+    <sequenceFlow id="850139c3-ce76-4a82-93e4-8145a71fd273-7a319f94-74b7-4869-aadc-e85898373d14" sourceRef="850139c3-ce76-4a82-93e4-8145a71fd273" targetRef="7a319f94-74b7-4869-aadc-e85898373d14" />
+    <sequenceFlow id="7a319f94-74b7-4869-aadc-e85898373d14-d2d62f8d-2ed5-4475-887b-760dedda5296" sourceRef="7a319f94-74b7-4869-aadc-e85898373d14" targetRef="d2d62f8d-2ed5-4475-887b-760dedda5296" />
+
+  </process>
+
+  <bpmndi:BPMNDiagram>
+    <bpmndi:BPMNPlane bpmnElement="com.sample.process" >
+      <bpmndi:BPMNShape bpmnElement="850139c3-ce76-4a82-93e4-8145a71fd273" >
+        <dc:Bounds x="100" y="100" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="7a319f94-74b7-4869-aadc-e85898373d14" >
+        <dc:Bounds x="210" y="124" width="80" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="d2d62f8d-2ed5-4475-887b-760dedda5296" >
+        <dc:Bounds x="402" y="138" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="850139c3-ce76-4a82-93e4-8145a71fd273-7a319f94-74b7-4869-aadc-e85898373d14" >
+        <di:waypoint x="124" y="124" />
+        <di:waypoint x="250" y="148" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="7a319f94-74b7-4869-aadc-e85898373d14-d2d62f8d-2ed5-4475-887b-760dedda5296" >
+        <di:waypoint x="250" y="148" />
+        <di:waypoint x="426" y="162" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+
+</definitions>
