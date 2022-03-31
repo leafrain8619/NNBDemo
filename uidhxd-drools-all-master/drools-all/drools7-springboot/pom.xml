@@ -13,7 +13,7 @@
 	<properties>
 		<java.version>1.8</java.version>
 		<org.kie.version>7.22.0.Final</org.kie.version>
-		<spring.boot.version>2.1.7.RELEASE</spring.boot.version>
+		<spring.boot.version>2.5.12</spring.boot.version>
 		<mybatis.spring.version>1.2.4</mybatis.spring.version>
         <mapper.starter.version>2.0.3-beta1</mapper.starter.version>
         <pagehelper.starter.version>1.2.5</pagehelper.starter.version>
